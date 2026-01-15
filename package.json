@@ -1,17 +1,19 @@
 {
   "name": "ai-test-wordpress",
   "version": "1.0.0",
-  "description": "WordPress theme with Gutenberg blocks and AI-assisted block creation",
+  "description": "WordPress theme with ACF blocks and AI-assisted block creation",
   "scripts": {
     "start": "wp-scripts start",
     "build": "wp-scripts build",
     "create-block": "node scripts/create-block.js",
+    "create-acf-block": "node scripts/create-acf-block.js",
     "ai-block": "node scripts/ai-block-creator.js"
   },
   "keywords": [
     "wordpress",
     "gutenberg",
     "blocks",
+    "acf",
     "ai"
   ],
   "author": "",

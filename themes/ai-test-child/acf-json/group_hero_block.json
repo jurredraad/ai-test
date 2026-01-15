@@ -1,0 +1,90 @@
+{
+    "key": "group_hero_block",
+    "title": "Hero Block Fields",
+    "fields": [
+        {
+            "key": "field_hero_title",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Enter the main hero title",
+            "required": 1,
+            "default_value": "Your Hero Title",
+            "placeholder": "Enter hero title"
+        },
+        {
+            "key": "field_hero_subtitle",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "type": "textarea",
+            "instructions": "Enter the hero subtitle or description",
+            "required": 0,
+            "rows": 3,
+            "default_value": "Add a compelling subtitle here"
+        },
+        {
+            "key": "field_hero_button_text",
+            "label": "Button Text",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "Enter button text (leave empty to hide button)",
+            "required": 0,
+            "placeholder": "Learn More"
+        },
+        {
+            "key": "field_hero_button_link",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "url",
+            "instructions": "Enter button URL",
+            "required": 0,
+            "placeholder": "https://"
+        },
+        {
+            "key": "field_hero_background_image",
+            "label": "Background Image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Upload a background image",
+            "required": 0,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_hero_overlay_opacity",
+            "label": "Overlay Opacity",
+            "name": "overlay_opacity",
+            "type": "range",
+            "instructions": "Adjust the dark overlay opacity (0-100)",
+            "required": 0,
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 5
+        },
+        {
+            "key": "field_hero_text_alignment",
+            "label": "Text Alignment",
+            "name": "text_alignment",
+            "type": "select",
+            "instructions": "Choose text alignment",
+            "required": 0,
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "default_value": "center"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/hero"
+            }
+        ]
+    ]
+}
