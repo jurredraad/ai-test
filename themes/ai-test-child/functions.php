@@ -10,6 +10,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Load ACF field components
+ */
+function ai_test_child_load_acf_components() {
+    $components_dir = get_stylesheet_directory() . '/acf-components/';
+    
+    if ( file_exists( $components_dir ) ) {
+        $components = array(
+            'button.php',
+            'heading.php',
+            'background.php',
+            'spacing.php',
+            'content.php',
+        );
+        
+        foreach ( $components as $component ) {
+            $file = $components_dir . $component;
+            if ( file_exists( $file ) ) {
+                require_once $file;
+            }
+        }
+    }
+}
+add_action( 'after_setup_theme', 'ai_test_child_load_acf_components' );
+
+/**
  * Enqueue parent and child theme styles
  */
 function ai_test_child_enqueue_styles() {
