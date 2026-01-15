@@ -1,0 +1,87 @@
+{
+    "key": "group_two_column_block",
+    "title": "Two Column Block Fields",
+    "fields": [
+        {
+            "key": "field_two_column_ratio",
+            "label": "Column Ratio",
+            "name": "column_ratio",
+            "type": "select",
+            "instructions": "Choose the width ratio for columns",
+            "required": 0,
+            "choices": {
+                "50-50": "50% / 50% (Equal)",
+                "60-40": "60% / 40%",
+                "40-60": "40% / 60%",
+                "70-30": "70% / 30%",
+                "30-70": "30% / 70%"
+            },
+            "default_value": "50-50"
+        },
+        {
+            "key": "field_two_column_vertical_alignment",
+            "label": "Vertical Alignment",
+            "name": "vertical_alignment",
+            "type": "select",
+            "instructions": "Align content vertically",
+            "required": 0,
+            "choices": {
+                "top": "Top",
+                "center": "Center",
+                "bottom": "Bottom"
+            },
+            "default_value": "center"
+        },
+        {
+            "key": "field_two_column_reverse_mobile",
+            "label": "Reverse on Mobile",
+            "name": "reverse_on_mobile",
+            "type": "true_false",
+            "instructions": "Reverse column order on mobile devices",
+            "required": 0,
+            "default_value": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_two_column_left_content",
+            "label": "Left Column Content",
+            "name": "left_content",
+            "type": "wysiwyg",
+            "instructions": "Add content for the left column",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_two_column_right_content",
+            "label": "Right Column Content",
+            "name": "right_content",
+            "type": "wysiwyg",
+            "instructions": "Add content for the right column",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/two-column"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1737814401
+}

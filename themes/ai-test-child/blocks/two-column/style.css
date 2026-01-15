@@ -1,0 +1,101 @@
+.two-column-block {
+    padding: 60px 0;
+}
+
+.two-column-block .row {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.two-column-block .column {
+    flex: 1;
+}
+
+/* Column Ratios */
+.two-column-block.ratio-50-50 .column-left,
+.two-column-block.ratio-50-50 .column-right {
+    flex: 1;
+}
+
+.two-column-block.ratio-60-40 .column-left {
+    flex: 1.5;
+}
+
+.two-column-block.ratio-60-40 .column-right {
+    flex: 1;
+}
+
+.two-column-block.ratio-40-60 .column-left {
+    flex: 1;
+}
+
+.two-column-block.ratio-40-60 .column-right {
+    flex: 1.5;
+}
+
+.two-column-block.ratio-70-30 .column-left {
+    flex: 2.33;
+}
+
+.two-column-block.ratio-70-30 .column-right {
+    flex: 1;
+}
+
+.two-column-block.ratio-30-70 .column-left {
+    flex: 1;
+}
+
+.two-column-block.ratio-30-70 .column-right {
+    flex: 2.33;
+}
+
+/* Vertical Alignment */
+.two-column-block.align-top .row {
+    align-items: flex-start;
+}
+
+.two-column-block.align-center .row {
+    align-items: center;
+}
+
+.two-column-block.align-bottom .row {
+    align-items: flex-end;
+}
+
+/* Content Styling */
+.two-column-block .column h2,
+.two-column-block .column h3,
+.two-column-block .column h4 {
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.two-column-block .column p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.two-column-block .column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .two-column-block .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .two-column-block.reverse-mobile .row {
+        flex-direction: column-reverse;
+    }
+
+    /* Reset flex ratios on mobile */
+    .two-column-block .column-left,
+    .two-column-block .column-right {
+        flex: 1 1 100%;
+    }
+}
