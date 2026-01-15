@@ -1,0 +1,26 @@
+{
+  "name": "ai-test-wordpress",
+  "version": "1.0.0",
+  "description": "WordPress theme with Gutenberg blocks and AI-assisted block creation",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "create-block": "node scripts/create-block.js",
+    "ai-block": "node scripts/ai-block-creator.js"
+  },
+  "keywords": [
+    "wordpress",
+    "gutenberg",
+    "blocks",
+    "ai"
+  ],
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.19.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.5",
+    "chalk": "^4.1.2"
+  }
+}
