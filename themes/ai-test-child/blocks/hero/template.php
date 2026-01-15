@@ -30,7 +30,7 @@ $overlay_opacity = get_field( 'overlay_opacity' ) ?: 50;
 $text_alignment = get_field( 'text_alignment' ) ?: 'center';
 
 ?>
-<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $className ); ?>" style="<?php echo $background_image ? 'background-image: url(' . esc_url( $background_image['url'] ) . ');' : ''; ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $className ); ?>" style="<?php echo ( $background_image && isset( $background_image['url'] ) ) ? 'background-image: url(' . esc_url( $background_image['url'] ) . ');' : ''; ?>">
     <div class="hero-overlay" style="opacity: <?php echo esc_attr( $overlay_opacity / 100 ); ?>;"></div>
     <div class="container">
         <div class="hero-content" style="text-align: <?php echo esc_attr( $text_alignment ); ?>;">

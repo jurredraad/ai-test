@@ -16,10 +16,7 @@ function ai_test_child_enqueue_styles() {
     // Enqueue parent theme stylesheet
     wp_enqueue_style( 'ai-test-parent-style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
     
-    // Enqueue parent layout styles
-    wp_enqueue_style( 'ai-test-parent-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), '1.0.0' );
-    
-    // Enqueue child theme stylesheet
+    // Enqueue child theme stylesheet (layout.css is already enqueued by parent)
     wp_enqueue_style( 'ai-test-child-style', get_stylesheet_uri(), array( 'ai-test-parent-style' ), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'ai_test_child_enqueue_styles' );
