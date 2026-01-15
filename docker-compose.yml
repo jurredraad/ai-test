@@ -1,0 +1,32 @@
+services:
+
+  wordpress:
+    image: wordpress:6.9-php8.4-apache
+    restart: unless-stopped
+    ports:
+      - 8082:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: draad
+      WORDPRESS_DB_PASSWORD: dr11d
+      WORDPRESS_DB_NAME: ai-jurre-test
+    volumes:
+      - wordpress:/var/www/html
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./themes:/var/www/html/wp-content/themes
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: draad
+      MYSQL_PASSWORD: dr11d
+      MYSQL_DATABASE: ai-jurre-test
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:
