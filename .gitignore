@@ -1,0 +1,34 @@
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build files
+/themes/*/build/
+/themes/*/dist/
+/themes/*/blocks/*/build/
+/themes/*/blocks/*.css
+/themes/*/blocks/*.js
+/themes/*/blocks/*.asset.php
+
+# WordPress
+wp-config.php
+.htaccess
+wp-content/uploads/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
