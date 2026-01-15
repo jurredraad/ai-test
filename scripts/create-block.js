@@ -148,10 +148,10 @@ registerBlockType('ai-test/${kebabName}', {
     console.log(`\n✅ Block "${blockName}" created successfully!`);
     console.log(`\n📁 Location: themes/ai-test-child/blocks/${kebabName}`);
     console.log(`\n📝 Next steps:`);
-    console.log(`   1. Update webpack.config.js to include the new block`);
-    console.log(`   2. Run "npm run build" to compile the block`);
-    console.log(`   3. Activate the theme in WordPress`);
-    console.log(`   4. The block will be available in the block inserter\n`);
+    console.log(`   1. Run "npm run build" to compile the block`);
+    console.log(`   2. Activate the theme in WordPress`);
+    console.log(`   3. The block will be available in the block inserter`);
+    console.log(`\n💡 Note: The webpack config will automatically detect your new block!\n`);
 }
 
 createBlock().catch(console.error);

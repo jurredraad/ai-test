@@ -27,4 +27,3 @@ module.exports = {
         filename: '[name]/build/index.js',
     },
 };
-
